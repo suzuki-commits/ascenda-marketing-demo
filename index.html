@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ASCENDA｜BtoBマーケティングの事業成長コミット集団</title>
+<link rel="preload" as="image" type="image/avif" href="./images/everybeyond/hero.avif" fetchpriority="high">
+<meta name="description" content="BtoBマーケティング専門の『事業成長コミット集団』。戦略設計から実行まで、貴社の事業成長に深くコミット。商談数3倍・1,000件リード獲得の実績。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="ASCENDA｜BtoBマーケティングの事業成長コミット集団">
+<meta property="og:description" content="戦略から実行まで伴走する、BtoBマーケティングの事業成長コミット集団。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A2540; --navy-2:#0F3A5F; --navy-3:#102B45;
+  --cyan:#0CC0DF; --cyan-2:#0891B2; --cyan-soft:#E6F9FD;
+  --coral:#FF6A3D; --coral-2:#FF8456;
+  --ink:#0F172A; --slate:#475569; --slate-2:#64748B;
+  --mist:#F5F8FC; --mist-2:#EDF2F8; --line:#E2E8F0; --white:#FFFFFF;
+  --r:18px; --r-lg:26px;
+  --shadow:0 24px 60px -28px rgba(10,37,64,0.32);
+  --shadow-sm:0 10px 30px -16px rgba(10,37,64,0.28);
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--white);
+  line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.en{font-family:'Manrope',sans-serif;letter-spacing:0.02em}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;font-family:'Manrope',sans-serif;
+  font-weight:700;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--cyan-2);margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--coral))}
+.sec-title{font-size:clamp(28px,4.4vw,46px);font-weight:900;line-height:1.28;letter-spacing:-0.01em}
+.sec-title .ac{color:var(--cyan-2)}
+.lead{color:var(--slate);font-size:clamp(15px,1.7vw,17px);margin-top:18px}
+section{position:relative}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- CTA buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:16px;padding:17px 32px;border-radius:999px;
+  cursor:pointer;border:none;transition:transform .2s,box-shadow .25s,background .25s;white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--coral),var(--coral-2));color:#fff;
+  box-shadow:0 16px 34px -12px rgba(255,106,61,0.62);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 44px -12px rgba(255,106,61,0.7)}
+.btn-ghost{background:rgba(255,255,255,0.08);color:#fff;border:1.5px solid rgba(255,255,255,0.34);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,0.16);transform:translateY(-3px)}
+.btn-dark{background:var(--navy);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-dark:hover{transform:translateY(-3px);background:var(--navy-2)}
+.btn .arw{font-size:18px;transition:transform .2s}
+.btn:hover .arw{transform:translateX(4px)}
+
+/* ---------- Header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .3s}
+.hdr-in{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:var(--maxw);margin:0 auto;padding:18px 24px;transition:padding .3s;
+}
+header.scrolled{background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);box-shadow:0 6px 24px -16px rgba(10,37,64,0.3)}
+header.scrolled .hdr-in{padding:11px 24px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Manrope',sans-serif;font-weight:800;font-size:22px;color:#fff;transition:color .3s}
+header.scrolled .logo{color:var(--navy)}
+.logo .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--coral));box-shadow:0 0 0 5px rgba(12,192,223,0.18)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a.lnk{font-size:14px;font-weight:500;color:rgba(255,255,255,0.86);transition:color .25s}
+header.scrolled .nav a.lnk{color:var(--slate)}
+.nav a.lnk:hover{color:var(--cyan)}
+.hdr-cta{font-size:14px;padding:11px 22px}
+@media(max-width:860px){.nav a.lnk{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background-image:url('./images/everybeyond/hero.png');
+  background-image:image-set(url('./images/everybeyond/hero.avif') type('image/avif'),url('./images/everybeyond/hero.webp') type('image/webp'),url('./images/everybeyond/hero.png') type('image/png'));
+  background-size:cover;background-position:center right;
+}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,24,44,0.96) 0%,rgba(10,37,64,0.86) 42%,rgba(10,37,64,0.45) 72%,rgba(10,37,64,0.2) 100%)}
+.hero-grid{position:absolute;inset:0;z-index:1;opacity:0.5;background-image:linear-gradient(rgba(12,192,223,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(12,192,223,0.06) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(circle at 30% 50%,#000,transparent 75%)}
+.hero-inner{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;padding:120px 24px 90px;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:9px;background:rgba(12,192,223,0.13);border:1px solid rgba(12,192,223,0.4);color:#bdeefa;font-size:13px;font-weight:700;padding:8px 17px;border-radius:999px;margin-bottom:26px}
+.hero-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(12,192,223,0.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(12,192,223,0)}100%{box-shadow:0 0 0 0 rgba(12,192,223,0)}}
+.hero h1{font-size:clamp(34px,5.6vw,64px);font-weight:900;color:#fff;line-height:1.18;letter-spacing:-0.02em;max-width:15ch}
+.hero h1 .hl{position:relative;color:#fff;white-space:nowrap}
+.hero h1 .hl::after{content:"";position:absolute;left:-2px;right:-2px;bottom:6px;height:14px;z-index:-1;background:linear-gradient(90deg,var(--coral),var(--cyan));opacity:0.9;border-radius:3px}
+.hero-sub{color:#c6d4ea;font-size:clamp(15px,1.9vw,19px);margin-top:24px;max-width:42ch;line-height:1.85}
+.hero-spotlight{display:inline-flex;align-items:flex-end;gap:20px;margin:34px 0 16px;background:linear-gradient(135deg,rgba(255,106,61,0.16),rgba(12,192,223,0.10));border:1px solid rgba(12,192,223,0.4);padding:22px 30px 20px;border-radius:20px;backdrop-filter:blur(12px);box-shadow:0 22px 50px -22px rgba(12,192,223,0.3)}
+.hero-spotlight .big{font-family:'Manrope',sans-serif;font-weight:800;color:#fff;line-height:0.9;font-size:clamp(58px,8vw,104px);letter-spacing:-0.03em;text-shadow:0 6px 30px rgba(255,106,61,0.32)}
+.hero-spotlight .big small{font-size:0.4em;margin-left:2px;color:var(--cyan);font-weight:800}
+.hero-spotlight .ctx{display:flex;flex-direction:column;gap:5px;padding-bottom:12px}
+.hero-spotlight .ctx .ttl{font-size:15px;font-weight:700;color:#fff;line-height:1.45}
+.hero-spotlight .ctx .src{font-size:11px;color:#9fb2d2;letter-spacing:0.03em}
+.hero-substats{display:flex;flex-wrap:wrap;gap:26px;margin:18px 0 38px}
+.hero-substats span{display:inline-flex;align-items:baseline;gap:7px;font-size:13px;color:#9fb2d2;letter-spacing:0.04em}
+.hero-substats span strong{font-family:'Manrope',sans-serif;color:#eaf6fb;font-size:21px;font-weight:800}
+.hero-substats span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);align-self:center;margin-right:3px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:15px;align-items:center}
+.hero-note{color:#8ba0c0;font-size:12.5px;margin-top:18px;display:flex;align-items:center;gap:8px}
+.hero-note::before{content:"✓";color:var(--cyan);font-weight:800}
+.scroll-ind{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:0.2em;font-family:'Manrope';text-align:center}
+.scroll-ind .mouse{width:24px;height:38px;border:2px solid rgba(255,255,255,0.4);border-radius:14px;margin:0 auto 8px;position:relative}
+.scroll-ind .mouse::after{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:4px;height:7px;background:var(--cyan);border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{0%{opacity:0;top:7px}40%{opacity:1}80%{opacity:0;top:18px}}
+@media(max-width:600px){.scroll-ind{display:none}.hero-spotlight{gap:14px;padding:18px 20px 16px}}
+
+/* ---------- Trust bar ---------- */
+.trust{background:var(--navy-3);padding:26px 0;border-top:1px solid rgba(255,255,255,0.06)}
+.trust-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 40px}
+.trust-lbl{color:#7e93b4;font-size:12px;font-family:'Manrope';letter-spacing:0.14em;text-transform:uppercase}
+.trust-items{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center}
+.trust-items b{color:#dce7f5;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.trust-items b i{font-style:normal;color:var(--cyan);font-family:'Manrope';font-weight:800;font-size:17px}
+
+/* ---------- generic section pad ---------- */
+.pad{padding:clamp(72px,9vw,118px) 0}
+.pad-sm{padding:clamp(54px,7vw,84px) 0}
+.center{text-align:center;max-width:760px;margin:0 auto}
+
+/* ---------- Before / After ---------- */
+.ba{background:var(--mist)}
+.ba-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:30px;align-items:stretch;margin-top:54px}
+.ba-card{background:#fff;border-radius:var(--r-lg);padding:36px 32px;border:1px solid var(--line);box-shadow:var(--shadow-sm);position:relative}
+.ba-card.before{background:#fff}
+.ba-card.after{background:linear-gradient(160deg,var(--navy),var(--navy-2));border:none;color:#fff;box-shadow:0 30px 60px -26px rgba(10,37,64,0.5)}
+.ba-badge{display:inline-flex;align-items:center;gap:8px;font-family:'Manrope';font-weight:800;font-size:12px;letter-spacing:0.12em;padding:7px 15px;border-radius:999px;margin-bottom:22px}
+.before .ba-badge{background:var(--mist-2);color:var(--slate)}
+.after .ba-badge{background:rgba(12,192,223,0.18);color:var(--cyan)}
+.ba-card h3{font-size:21px;font-weight:900;margin-bottom:20px;letter-spacing:-0.01em}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.ba-list li{display:flex;gap:12px;font-size:15px;line-height:1.7}
+.before .ba-list li{color:var(--slate)}
+.ba-list li .ic{flex-shrink:0;width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-top:2px}
+.before .ic{background:#FDECEC;color:#E05656}
+.after .ic{background:rgba(12,192,223,0.2);color:var(--cyan)}
+.after .ba-list li{color:#d6e2f2}
+.ba-arrow{display:flex;align-items:center;justify-content:center;font-size:30px;color:var(--cyan-2)}
+@media(max-width:880px){.ba-grid{grid-template-columns:1fr}.ba-arrow{transform:rotate(90deg);padding:6px 0}}
+
+/* ---------- Pain ---------- */
+.pain{background:var(--navy);color:#fff}
+.pain .sec-title{color:#fff}
+.pain .lead{color:#aebfd8}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:52px}
+.pain-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--r);padding:28px 24px;transition:transform .25s,border-color .25s,background .25s}
+.pain-card:hover{transform:translateY(-5px);border-color:rgba(255,106,61,0.5);background:rgba(255,255,255,0.07)}
+.pain-card .x{width:38px;height:38px;border-radius:11px;background:rgba(255,106,61,0.16);color:var(--coral);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;margin-bottom:16px}
+.pain-card p{font-size:15px;color:#cdd9ec;line-height:1.7}
+.pain-card p b{color:#fff;font-weight:700}
+
+/* ---------- Concept ---------- */
+.concept .badge-row{margin-bottom:18px}
+.concept-hero{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center}
+.concept-copy h2{font-size:clamp(26px,3.8vw,42px);font-weight:900;line-height:1.32;letter-spacing:-0.01em;margin-bottom:22px}
+.concept-copy h2 .ac{color:var(--cyan-2)}
+.concept-copy p{color:var(--slate);font-size:16px;margin-bottom:16px}
+.concept-copy .quote{border-left:3px solid var(--cyan);padding-left:18px;font-weight:700;color:var(--ink);font-size:17px;margin:24px 0}
+.concept-visual{position:relative}
+.concept-bento{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px}
+.cb{border-radius:var(--r);overflow:hidden;position:relative;box-shadow:var(--shadow-sm)}
+.cb img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.cb:hover img{transform:scale(1.06)}
+.cb.tall{grid-row:span 2}
+.cb-cap{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(transparent,rgba(8,24,44,0.86));color:#fff;font-size:13px;font-weight:700}
+@media(max-width:880px){.concept-hero{grid-template-columns:1fr;gap:36px}}
+
+/* ---------- Skills hexagon ---------- */
+.skills{background:linear-gradient(180deg,var(--mist),#fff)}
+.skills-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:50px;align-items:center;margin-top:50px}
+.hex-box{position:relative;display:flex;align-items:center;justify-content:center}
+.hex-svg{width:100%;max-width:440px}
+.hex-center-img{position:absolute;width:96px;height:96px;border-radius:50%;overflow:hidden;box-shadow:0 12px 30px -8px rgba(10,37,64,0.5);border:3px solid #fff}
+.hex-center-img img{width:100%;height:100%;object-fit:cover}
+.skills-list{display:flex;flex-direction:column;gap:14px}
+.sk-item{display:flex;gap:16px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm);transition:transform .25s,border-color .25s}
+.sk-item:hover{transform:translateX(6px);border-color:var(--cyan)}
+.sk-num{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Manrope';font-weight:800;font-size:16px}
+.sk-item h4{font-size:16px;font-weight:800;margin-bottom:3px}
+.sk-item p{font-size:13.5px;color:var(--slate-2);line-height:1.6}
+@media(max-width:880px){.skills-wrap{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- Services ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:22px;margin-top:54px}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.svc-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.svc-img{aspect-ratio:4/3;overflow:hidden;position:relative}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.svc-card:hover .svc-img img{transform:scale(1.07)}
+.svc-tag{position:absolute;top:14px;left:14px;background:rgba(10,37,64,0.85);color:#fff;font-family:'Manrope';font-weight:700;font-size:11px;letter-spacing:0.08em;padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+.svc-body{padding:24px 22px 26px;flex:1;display:flex;flex-direction:column}
+.svc-body h4{font-size:18px;font-weight:900;margin-bottom:10px}
+.svc-body p{font-size:14px;color:var(--slate);flex:1}
+.svc-body .more{margin-top:16px;font-weight:700;font-size:13.5px;color:var(--cyan-2);display:inline-flex;align-items:center;gap:6px}
+.svc-card:hover .more{gap:10px}
+
+/* ---------- Rules ---------- */
+.rules{background:var(--navy);color:#fff}
+.rules .sec-title{color:#fff}
+.rules .lead{color:#aebfd8}
+.rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;counter-reset:r}
+.rule-card{background:linear-gradient(165deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.12);border-radius:var(--r-lg);padding:36px 28px;position:relative;overflow:hidden}
+.rule-card::before{counter-increment:r;content:"0" counter(r);position:absolute;top:14px;right:18px;font-family:'Manrope';font-weight:800;font-size:62px;color:rgba(12,192,223,0.12)}
+.rule-card .ic{width:52px;height:52px;border-radius:14px;background:rgba(12,192,223,0.16);color:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
+.rule-card h4{font-size:19px;font-weight:900;margin-bottom:12px}
+.rule-card p{font-size:14.5px;color:#c6d4ea;line-height:1.75}
+@media(max-width:820px){.rules-grid{grid-template-columns:1fr}}
+
+/* ---------- Proven / stats ---------- */
+.proven .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:54px 0}
+.stat{text-align:center;padding:30px 16px;background:linear-gradient(180deg,#fff,var(--mist));border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-sm)}
+.stat .num{font-family:'Manrope';font-weight:800;font-size:clamp(36px,5vw,54px);line-height:1;letter-spacing:-0.02em;background:linear-gradient(135deg,var(--navy),var(--cyan-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat .num small{font-size:0.42em;-webkit-text-fill-color:var(--cyan-2)}
+.stat .lbl{margin-top:10px;font-size:13.5px;color:var(--slate);font-weight:500}
+@media(max-width:780px){.proven .stats-row{grid-template-columns:1fr 1fr}}
+.cases-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.case-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.case-card::after{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--cyan),var(--coral))}
+.case-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.case-co{font-size:13px;font-weight:700;color:var(--cyan-2);font-family:'Manrope';letter-spacing:0.04em;margin-bottom:10px}
+.case-metric{font-family:'Manrope';font-weight:800;font-size:30px;color:var(--navy);line-height:1.1;letter-spacing:-0.01em;margin-bottom:10px}
+.case-metric small{font-size:0.5em;color:var(--slate);font-weight:700}
+.case-card p{font-size:14px;color:var(--slate)}
+.case-feature{grid-column:span 2;display:grid;grid-template-columns:1.1fr 1fr;gap:0;padding:0;overflow:hidden}
+.case-feature .cf-img{overflow:hidden}
+.case-feature .cf-img img{width:100%;height:100%;object-fit:cover;min-height:230px}
+.case-feature .cf-body{padding:32px 30px;display:flex;flex-direction:column;justify-content:center}
+@media(max-width:780px){.case-feature{grid-column:span 1;grid-template-columns:1fr}}
+
+/* ---------- Positioning ---------- */
+.posn{background:var(--mist)}
+.posn-table-wrap{margin-top:48px;overflow-x:auto;border-radius:var(--r-lg);box-shadow:var(--shadow-sm);border:1px solid var(--line)}
+table.posn-table{width:100%;border-collapse:collapse;background:#fff;min-width:640px}
+.posn-table th,.posn-table td{padding:18px 20px;text-align:center;border-bottom:1px solid var(--line)}
+.posn-table thead th{font-size:14px;font-weight:700;color:var(--slate);background:var(--mist-2)}
+.posn-table thead th.us{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;font-size:15px;position:relative}
+.posn-table thead th.us .tagm{display:block;font-size:11px;color:var(--cyan);font-weight:700;margin-top:2px;font-family:'Manrope'}
+.posn-table tbody td:first-child{text-align:left;font-weight:700;font-size:14.5px;color:var(--ink)}
+.posn-table td.us{background:rgba(12,192,223,0.07);font-weight:800}
+.posn-table .mk{font-size:20px;font-weight:800}
+.mk.good{color:#10A36B}.mk.mid{color:#E0A100}.mk.bad{color:#C46A6A}
+.posn-table td.us .mk.good{color:var(--cyan-2)}
+.posn-note{font-size:12px;color:var(--slate-2);margin-top:14px}
+
+/* ---------- Flow ---------- */
+.flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:54px;position:relative}
+.flow-step{text-align:center;padding:0 18px;position:relative}
+.flow-step:not(:last-child)::after{content:"";position:absolute;top:30px;right:-0;width:100%;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 16px);z-index:0}
+.flow-num{position:relative;z-index:1;width:60px;height:60px;margin:0 auto 18px;border-radius:50%;background:#fff;border:2px solid var(--cyan);color:var(--cyan-2);display:flex;align-items:center;justify-content:center;font-family:'Manrope';font-weight:800;font-size:22px;box-shadow:0 8px 20px -8px rgba(12,192,223,0.5)}
+.flow-step h4{font-size:16px;font-weight:800;margin-bottom:8px}
+.flow-step p{font-size:13.5px;color:var(--slate)}
+@media(max-width:820px){.flow-steps{grid-template-columns:1fr 1fr;gap:34px 0}.flow-step::after{display:none}}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:820px;margin:48px auto 0;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:box-shadow .25s,border-color .25s}
+.faq-item.open{box-shadow:var(--shadow-sm);border-color:var(--cyan)}
+.faq-q{display:flex;align-items:center;gap:16px;padding:22px 24px;cursor:pointer;font-weight:700;font-size:15.5px}
+.faq-q .qm{flex-shrink:0;width:30px;height:30px;border-radius:8px;background:var(--cyan-soft);color:var(--cyan-2);display:flex;align-items:center;justify-content:center;font-family:'Manrope';font-weight:800}
+.faq-q .tgl{margin-left:auto;font-size:22px;color:var(--cyan-2);transition:transform .3s;flex-shrink:0}
+.faq-item.open .tgl{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a-in{padding:0 24px 24px 70px;color:var(--slate);font-size:14.5px;line-height:1.85}
+
+/* ---------- Final CTA ---------- */
+.final{position:relative;overflow:hidden;background:var(--navy)}
+.final-bg{position:absolute;inset:0;z-index:0;background-image:url('./images/everybeyond/final_cta.png');background-image:image-set(url('./images/everybeyond/final_cta.avif') type('image/avif'),url('./images/everybeyond/final_cta.webp') type('image/webp'),url('./images/everybeyond/final_cta.png') type('image/png'));background-size:cover;background-position:center}
+.final-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(8,24,44,0.95),rgba(10,37,64,0.82) 55%,rgba(10,37,64,0.55))}
+.final-in{position:relative;z-index:2;padding:clamp(78px,10vw,128px) 0;text-align:center;max-width:760px;margin:0 auto}
+.final h2{font-size:clamp(28px,4.6vw,50px);font-weight:900;color:#fff;line-height:1.3;letter-spacing:-0.01em}
+.final h2 .ac{color:var(--cyan)}
+.final p{color:#c6d4ea;font-size:17px;margin:22px 0 36px}
+.final-cta{display:flex;flex-wrap:wrap;gap:15px;justify-content:center}
+.final-assure{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center;margin-top:34px}
+.final-assure span{color:#bdeefa;font-size:13.5px;font-weight:500;display:inline-flex;align-items:center;gap:8px}
+.final-assure span::before{content:"✓";color:var(--cyan);font-weight:800}
+
+/* ---------- Footer ---------- */
+footer{background:#08182C;color:#9fb2d2;padding:60px 0 120px}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.foot-brand .logo{color:#fff;margin-bottom:14px}
+.foot-brand p{font-size:13.5px;max-width:34ch;line-height:1.8}
+.foot-contact{font-size:14px;line-height:2}
+.foot-contact .tel{font-family:'Manrope';font-weight:800;font-size:24px;color:#fff;letter-spacing:0.02em}
+.foot-contact .hrs{color:#7e93b4;font-size:12.5px}
+.foot-bottom{padding-top:24px;font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:#6b80a3}
+.disclaimer-note{margin-top:18px;font-size:11.5px;line-height:1.7;color:#62789c;background:rgba(255,255,255,0.03);border-radius:10px;padding:14px 18px;border:1px solid rgba(255,255,255,0.06)}
+
+/* ---------- Sticky bottom CTA (mobile) ---------- */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:90;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);box-shadow:0 -8px 30px -14px rgba(10,37,64,0.3);padding:12px 16px;display:none;align-items:center;gap:12px;transform:translateY(110%);transition:transform .4s}
+.sticky-cta.show{transform:none}
+.sticky-cta .sc-txt{flex:1;font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.4}
+.sticky-cta .sc-txt small{display:block;color:var(--slate-2);font-weight:500;font-size:11px}
+.sticky-cta .btn{padding:13px 20px;font-size:14px}
+@media(max-width:760px){.sticky-cta{display:flex}}
+
+.section-tag{font-size:11.5px;color:var(--slate-2);margin-top:10px;font-style:normal}
+.demo-disclaimer{position:fixed;top:0;left:0;right:0;z-index:200;background:linear-gradient(90deg,#0A2540,#0F3A5F);color:#d6e8f5;font-size:12px;line-height:1.5;text-align:center;padding:8px 16px;letter-spacing:0.01em;border-bottom:1px solid rgba(12,192,223,0.4)}
+.demo-disclaimer strong{color:#0CC0DF;font-weight:800;letter-spacing:0.06em}
+body{padding-top:36px}
+header{top:36px}
+@media(max-width:600px){.demo-disclaimer{font-size:10.5px;padding:7px 12px}body{padding-top:52px}header{top:52px}}
+</style>
+</head>
+<body>
+<div class="demo-disclaimer"><strong>CONCEPT DESIGN DEMO</strong> ｜ これはLPデザインのコンセプトデモです。架空ブランド「ASCENDA」を用いた実装サンプルであり、特定の実在企業の公式サイトではありません。</div>
+
+<!-- ===== Header ===== -->
+<header id="hdr">
+  <div class="hdr-in">
+    <a href="#" class="logo"><span class="dot"></span>ASCENDA</a>
+    <nav class="nav">
+      <a href="#concept" class="lnk">私たちについて</a>
+      <a href="#services" class="lnk">サービス</a>
+      <a href="#cases" class="lnk">導入実績</a>
+      <a href="#faq" class="lnk">よくある質問</a>
+      <a href="#contact" class="btn btn-primary hdr-cta">無料で相談する<span class="arw">→</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <span class="hero-tag"><span class="pulse"></span>BtoBマーケティング専門・事業成長コミット集団</span>
+    <h1>マーケティングではなく、<br><span class="hl">事業成長</span>に、コミットする。</h1>
+    <p class="hero-sub">戦略設計から実行まで。1人の担当者が4〜5社に深く伴走し、貴社の「商談が増える仕組み」を、自走できる形でつくります。</p>
+    <div class="hero-spotlight">
+      <div class="big">×3<small></small></div>
+      <div class="ctx">
+        <div class="ttl">商談数の最大化を実現</div>
+        <div class="src">※ 大手SaaS企業A社様 支援実績（月1〜3件 → 10件以上）</div>
+      </div>
+    </div>
+    <div class="hero-substats">
+      <span><strong>1,000件+</strong>リード獲得</span>
+      <span><strong>×2.7</strong>ウェビナー集客</span>
+      <span><strong>500件+</strong>月間リード創出</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">無料で相談する<span class="arw">→</span></a>
+      <a href="#contact" class="btn btn-ghost">サービス資料をダウンロード</a>
+    </div>
+    <p class="hero-note">相談は無料・即日返信／平日 9:00–20:00 受付</p>
+  </div>
+  <div class="scroll-ind"><div class="mouse"></div>SCROLL</div>
+</section>
+
+<!-- ===== Trust bar ===== -->
+<div class="trust">
+  <div class="wrap trust-in">
+    <span class="trust-lbl">Proven Results</span>
+    <div class="trust-items">
+      <b><i>3倍</i>商談数</b>
+      <b><i>1,000件+</i>リード獲得</b>
+      <b><i>2.7倍</i>ウェビナー集客</b>
+      <b><i>10位以内</i>SEO検索順位</b>
+      <b><i>4〜5社</i>専任伴走</b>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Before / After ===== -->
+<section class="ba pad" id="proposal">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Renewal Proposal</span>
+      <h2 class="sec-title">「伝わる強み」を、<span class="ac">成果に変える</span>サイトへ。</h2>
+      <p class="lead">ASCENDA様の確かな実績を、訪問者が一目で理解し、迷わず相談に進める導線へ。現状サイトの課題と、本リニューアル提案で実現することを整理しました。</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card before reveal">
+        <span class="ba-badge">BEFORE ｜ 現状の課題</span>
+        <h3>強みが、伝わりきっていない</h3>
+        <ul class="ba-list">
+          <li><span class="ic">×</span><div>テンプレート構成で、第一印象から差別化が伝わりにくい</div></li>
+          <li><span class="ic">×</span><div><b>商談3倍・1,000件リード</b>などの強い実績が下層に埋もれている</div></li>
+          <li><span class="ic">×</span><div>相談CTAが分散し、「次に何をすべきか」が瞬時に分からない</div></li>
+          <li><span class="ic">×</span><div>スマホ閲覧・表示速度の最適化に改善余地</div></li>
+        </ul>
+      </div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-card after reveal">
+        <span class="ba-badge">AFTER ｜ 本提案で実現</span>
+        <h3>3秒で伝わり、迷わず相談へ</h3>
+        <ul class="ba-list">
+          <li><span class="ic">✓</span><div>結論先出しの大型Hero＋<b>「商談×3」</b>を主役にした一点突破訴求</div></li>
+          <li><span class="ic">✓</span><div>提供価値を6軸スキル図で可視化し、「何ができる会社か」を即理解</div></li>
+          <li><span class="ic">✓</span><div>常時追従ヘッダー＋スマホ追従CTAで、相談導線を切らさない</div></li>
+          <li><span class="ic">✓</span><div>次世代画像（AVIF/WebP）で高速表示、離脱を抑えCVRを底上げ</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pain ===== -->
+<section class="pain pad">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" style="color:var(--coral)">Common Challenges</span>
+      <h2 class="sec-title">こんな課題、<br>抱えていませんか？</h2>
+      <p class="lead">BtoBマーケティングの「あるある」を、ASCENDAは実行まで踏み込んで解決します。</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal"><div class="x">!</div><p>社内に<b>マーケ人材がいない</b>／採用しても定着しない</p></div>
+      <div class="pain-card reveal"><div class="x">!</div><p><b>MAツールを導入したが</b>、有効活用できていない</p></div>
+      <div class="pain-card reveal"><div class="x">!</div><p><b>リードは取れても商談化</b>・アポ率につながらない</p></div>
+      <div class="pain-card reveal"><div class="x">!</div><p>施策が<b>属人化</b>し、ノウハウが社内に残らない</p></div>
+      <div class="pain-card reveal"><div class="x">!</div><p>戦略は描けても、<b>実行リソースが足りない</b></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Concept ===== -->
+<section class="concept pad" id="concept">
+  <div class="wrap">
+    <div class="concept-hero">
+      <div class="concept-copy reveal">
+        <span class="eyebrow">About ASCENDA</span>
+        <h2>私たちは「マーケのプロ」ではなく、<br><span class="ac">事業成長にコミットする</span>プロ集団です。</h2>
+        <p>施策の納品で終わる支援は、もう必要とされていません。ASCENDAは、戦略設計から実行・改善までを一気通貫で伴走し、貴社が「自走できる状態」になるまで責任を持ちます。</p>
+        <div class="quote">1人の担当者が関わるのは、4〜5社まで。だから、一社一社に深く入り込めます。</div>
+        <p>マーケティング部門の立ち上げ、インサイドセールスの構築、MA運用、コンテンツ／SEOまで——「事業を伸ばすために必要なこと」を、肩書きの枠を越えて実行します。</p>
+      </div>
+      <div class="concept-visual reveal">
+        <div class="concept-bento">
+          <div class="cb tall">
+            <picture>
+              <source type="image/avif" srcset="./images/everybeyond/concept_1.avif">
+              <source type="image/webp" srcset="./images/everybeyond/concept_1.webp">
+              <img src="./images/everybeyond/concept_1.png" alt="マーケティング戦略の設計" width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
+            <div class="cb-cap">戦略設計から伴走</div>
+          </div>
+          <div class="cb">
+            <picture>
+              <source type="image/avif" srcset="./images/everybeyond/concept_2.avif">
+              <source type="image/webp" srcset="./images/everybeyond/concept_2.webp">
+              <img src="./images/everybeyond/concept_2.png" alt="データ分析" width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
+            <div class="cb-cap">データで意思決定</div>
+          </div>
+          <div class="cb">
+            <picture>
+              <source type="image/avif" srcset="./images/everybeyond/concept_3.avif">
+              <source type="image/webp" srcset="./images/everybeyond/concept_3.webp">
+              <img src="./images/everybeyond/concept_3.png" alt="伴走支援" width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
+            <div class="cb-cap">実行まで併走</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Skills hexagon ===== -->
+<section class="skills pad">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Capabilities</span>
+      <h2 class="sec-title">事業成長を支える、<span class="ac">6つの実行力</span></h2>
+      <p class="lead">戦略だけでも、ツールだけでもない。ASCENDAは6領域を横断して「成果が出る仕組み」をつくります。</p>
+    </div>
+    <div class="skills-wrap">
+      <div class="hex-box reveal">
+        <svg class="hex-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hexg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0CC0DF" stop-opacity="0.85"/>
+              <stop offset="1" stop-color="#0A2540" stop-opacity="0.7"/>
+            </linearGradient>
+          </defs>
+          <!-- grid rings -->
+          <polygon points="200,40 338,120 338,280 200,360 62,280 62,120" fill="none" stroke="#CBD8E8" stroke-width="1"/>
+          <polygon points="200,93 292,146 292,254 200,307 108,254 108,146" fill="none" stroke="#D8E2EE" stroke-width="1"/>
+          <polygon points="200,146 246,173 246,227 200,254 154,227 154,173" fill="none" stroke="#E2EAF3" stroke-width="1"/>
+          <line x1="200" y1="200" x2="200" y2="40" stroke="#E2EAF3"/>
+          <line x1="200" y1="200" x2="338" y2="120" stroke="#E2EAF3"/>
+          <line x1="200" y1="200" x2="338" y2="280" stroke="#E2EAF3"/>
+          <line x1="200" y1="200" x2="200" y2="360" stroke="#E2EAF3"/>
+          <line x1="200" y1="200" x2="62" y2="280" stroke="#E2EAF3"/>
+          <line x1="200" y1="200" x2="62" y2="120" stroke="#E2EAF3"/>
+          <!-- data shape -->
+          <polygon points="200,58 322,128 318,272 200,344 78,266 84,134" fill="url(#hexg)" stroke="#0CC0DF" stroke-width="2.5"/>
+          <!-- vertex dots -->
+          <circle cx="200" cy="58" r="5" fill="#FF6A3D"/><circle cx="322" cy="128" r="5" fill="#FF6A3D"/>
+          <circle cx="318" cy="272" r="5" fill="#FF6A3D"/><circle cx="200" cy="344" r="5" fill="#FF6A3D"/>
+          <circle cx="78" cy="266" r="5" fill="#FF6A3D"/><circle cx="84" cy="134" r="5" fill="#FF6A3D"/>
+          <!-- labels -->
+          <text x="200" y="28" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#0A2540">戦略設計</text>
+          <text x="360" y="120" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#0A2540">データ分析</text>
+          <text x="358" y="292" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#0A2540">MA運用</text>
+          <text x="200" y="386" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#0A2540">IS構築</text>
+          <text x="40" y="292" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#0A2540">コンテンツ</text>
+          <text x="40" y="120" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#0A2540">レポート</text>
+        </svg>
+        <div class="hex-center-img">
+          <picture>
+            <source type="image/avif" srcset="./images/everybeyond/case_1.avif">
+            <source type="image/webp" srcset="./images/everybeyond/case_1.webp">
+            <img src="./images/everybeyond/case_1.png" alt="成長" width="1024" height="1024" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+      <div class="skills-list reveal">
+        <div class="sk-item"><div class="sk-num">01</div><div><h4>戦略設計</h4><p>事業目標から逆算し、勝てる市場とKPIを定義。打ち手の優先順位まで描きます。</p></div></div>
+        <div class="sk-item"><div class="sk-num">02</div><div><h4>データ分析</h4><p>勘ではなく数字で意思決定。獲得から商談化までを可視化し、改善点を特定します。</p></div></div>
+        <div class="sk-item"><div class="sk-num">03</div><div><h4>MA運用</h4><p>導入だけで終わらせない。シナリオ設計・スコアリングまで実装し、ツールを成果につなげます。</p></div></div>
+        <div class="sk-item"><div class="sk-num">04</div><div><h4>インサイドセールス構築</h4><p>リードを商談に変える架電・ナーチャリング体制を、立ち上げから運用まで支援します。</p></div></div>
+        <div class="sk-item"><div class="sk-num">05</div><div><h4>コンテンツ／SEO</h4><p>検索上位とリード獲得を両立。事業に効くコンテンツを企画から制作まで。</p></div></div>
+        <div class="sk-item"><div class="sk-num">06</div><div><h4>レポーティング</h4><p>施策の効果を経営目線で可視化。次の一手が明確になる定例設計まで伴走します。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Services</span>
+      <h2 class="sec-title">必要なところに、<span class="ac">必要なだけ</span>。</h2>
+      <p class="lead">部分支援から伴走型まで。貴社のフェーズに合わせて、最適な支援領域を組み合わせます。</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-img"><span class="svc-tag">STRATEGY</span>
+          <picture><source type="image/avif" srcset="./images/everybeyond/service_1.avif"><source type="image/webp" srcset="./images/everybeyond/service_1.webp"><img src="./images/everybeyond/service_1.png" alt="戦略設計" width="1024" height="1024" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="svc-body"><h4>マーケティング戦略設計</h4><p>ターゲット・チャネル・KPIを定義し、再現性のある成長シナリオを描きます。</p><span class="more">詳しく見る →</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><span class="svc-tag">AUTOMATION</span>
+          <picture><source type="image/avif" srcset="./images/everybeyond/service_2.avif"><source type="image/webp" srcset="./images/everybeyond/service_2.webp"><img src="./images/everybeyond/service_2.png" alt="MA運用" width="1024" height="1024" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="svc-body"><h4>MA導入・運用支援</h4><p>シナリオ設計からスコアリングまで実装。導入したツールを「動く資産」に変えます。</p><span class="more">詳しく見る →</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><span class="svc-tag">INSIDE SALES</span>
+          <picture><source type="image/avif" srcset="./images/everybeyond/service_3.avif"><source type="image/webp" srcset="./images/everybeyond/service_3.webp"><img src="./images/everybeyond/service_3.png" alt="インサイドセールス" width="1024" height="1024" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="svc-body"><h4>インサイドセールス構築</h4><p>リードを商談化する架電・ナーチャリング体制を立ち上げから運用まで内製化支援。</p><span class="more">詳しく見る →</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><span class="svc-tag">CONTENT / SEO</span>
+          <picture><source type="image/avif" srcset="./images/everybeyond/service_4.avif"><source type="image/webp" srcset="./images/everybeyond/service_4.webp"><img src="./images/everybeyond/service_4.png" alt="コンテンツSEO" width="1024" height="1024" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="svc-body"><h4>コンテンツ／SEO支援</h4><p>検索上位とリード獲得を両立するコンテンツを、企画から制作・改善まで。</p><span class="more">詳しく見る →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Rules ===== -->
+<section class="rules pad">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" style="color:var(--cyan)">Our Commitment</span>
+      <h2 class="sec-title">成果にこだわる、<br>3つのご支援ルール</h2>
+      <p class="lead">「コミットする集団」であるために、ASCENDAが大切にしている約束です。</p>
+    </div>
+    <div class="rules-grid">
+      <div class="rule-card reveal"><div class="ic">◎</div><h4>事業成長にコミット</h4><p>施策の納品ではなく、貴社の事業が伸びることをゴールに設定。成果から逆算して動きます。</p></div>
+      <div class="rule-card reveal"><div class="ic">◷</div><h4>1人4〜5社まで</h4><p>担当が抱える案件数を絞り、一社一社に深く入り込む。だから「自分ごと」で伴走できます。</p></div>
+      <div class="rule-card reveal"><div class="ic">⇄</div><h4>戦略から実行まで</h4><p>描いて終わりにしない。実行・改善まで踏み込み、貴社が自走できる状態をつくります。</p></div>
+    </div>
+    <p class="center section-tag" style="margin-top:24px;color:#7e93b4">※ ご支援ルールの文言は、貴社の正式な表現に差し替えてご利用ください。</p>
+  </div>
+</section>
+
+<!-- ===== Proven / cases ===== -->
+<section class="proven pad" id="cases">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Case Studies</span>
+      <h2 class="sec-title">成果が、<span class="ac">物語っています。</span></h2>
+      <p class="lead">業種・規模を問わず、事業成長に直結する成果を生み出してきました。</p>
+    </div>
+    <div class="stats-row">
+      <div class="stat reveal"><div class="num">×3<small></small></div><div class="lbl">商談数の増加</div></div>
+      <div class="stat reveal"><div class="num">1,000<small>件+</small></div><div class="lbl">リード獲得</div></div>
+      <div class="stat reveal"><div class="num">×2.7<small></small></div><div class="lbl">ウェビナー集客</div></div>
+      <div class="stat reveal"><div class="num">500<small>件+</small></div><div class="lbl">月間リード創出</div></div>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card case-feature reveal">
+        <div class="cf-img"><picture><source type="image/avif" srcset="./images/everybeyond/case_2.avif"><source type="image/webp" srcset="./images/everybeyond/case_2.webp"><img src="./images/everybeyond/case_2.png" alt="ウェビナー集客" width="1024" height="1024" loading="lazy" decoding="async"></picture></div>
+        <div class="cf-body"><div class="case-co">大手SaaS企業 A社 様</div><div class="case-metric">商談数 ×3<small> 超</small></div><p>月1〜3件だった商談を、10件以上へ。インサイドセールス強化とナーチャリング設計で、安定した商談創出体制を構築。</p></div>
+      </div>
+      <div class="case-card reveal"><div class="case-co">BtoBマーケ支援 G社 様</div><div class="case-metric">1,000<small>件リード</small></div><p>1,000件のリード獲得と、60件以上の商談創出を実現。獲得から商談化までを一気通貫で支援。</p></div>
+      <div class="case-card reveal"><div class="case-co">製造業 A社 様</div><div class="case-metric">IS<small> 立ち上げ</small></div><p>ゼロからのインサイドセールス組織立ち上げを支援。属人化しない運用体制まで構築。</p></div>
+      <div class="case-card reveal"><div class="case-co">SNS企業 B社 様</div><div class="case-metric">×2.7<small> 集客</small></div><p>ウェビナー集客を2.7倍に。企画・集客・フォローまでの一貫設計で成果を最大化。</p></div>
+      <div class="case-card reveal"><div class="case-co">コンサルティング C社 様</div><div class="case-metric">500<small>件/月</small></div><p>毎月500件以上のリードを安定創出。継続的なリードジェネレーション基盤を確立。</p></div>
+      <div class="case-card reveal"><div class="case-co">SaaSベンダー D社 様</div><div class="case-metric">検索<small> 10位以内</small></div><p>SEO施策により主要キーワードで検索10位以内を達成。オーガニック流入を大幅に改善。</p></div>
+    </div>
+    <p class="section-tag" style="margin-top:18px;color:#94a3b8">※ 上記実績は everybeyond.com 掲載情報をもとに構成しています。個社の成果は条件により異なります。</p>
+  </div>
+</section>
+
+<!-- ===== Positioning ===== -->
+<section class="posn pad">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Positioning</span>
+      <h2 class="sec-title">なぜ、<span class="ac">ASCENDA</span>なのか。</h2>
+      <p class="lead">一般的なマーケ代行・総合コンサルと比べた、ASCENDAの立ち位置。</p>
+    </div>
+    <div class="posn-table-wrap reveal">
+      <table class="posn-table">
+        <thead><tr>
+          <th>比較項目</th><th>一般的なマーケ代行</th><th>総合コンサル</th>
+          <th class="us">ASCENDA<span class="tagm">事業成長コミット型</span></th>
+        </tr></thead>
+        <tbody>
+          <tr><td>事業成長へのコミット</td><td><span class="mk mid">△</span></td><td><span class="mk good">○</span></td><td class="us"><span class="mk good">◎</span></td></tr>
+          <tr><td>戦略から実行まで一気通貫</td><td><span class="mk mid">△</span></td><td><span class="mk mid">△</span></td><td class="us"><span class="mk good">◎</span></td></tr>
+          <tr><td>担当者の専任度</td><td><span class="mk bad">多数掛持ち</span></td><td><span class="mk mid">案件多数</span></td><td class="us"><span class="mk good">4〜5社に集中</span></td></tr>
+          <tr><td>実行支援（IS・MA運用）</td><td><span class="mk good">○</span></td><td><span class="mk mid">△</span></td><td class="us"><span class="mk good">◎</span></td></tr>
+          <tr><td>自走化・ノウハウ移転</td><td><span class="mk bad">×</span></td><td><span class="mk mid">△</span></td><td class="us"><span class="mk good">◎</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="posn-note">※ 比較表はASCENDAの強みに基づく一般的な比較イメージです。実際のポジショニング内容に応じて調整してご利用ください。</p>
+  </div>
+</section>
+
+<!-- ===== Flow ===== -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Flow</span>
+      <h2 class="sec-title">ご相談から、<span class="ac">伴走開始</span>まで</h2>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step reveal"><div class="flow-num">1</div><h4>無料相談</h4><p>課題やお悩みをヒアリング。まずは気軽にご相談ください。</p></div>
+      <div class="flow-step reveal"><div class="flow-num">2</div><h4>ご提案</h4><p>現状分析をもとに、最適な支援プランをご提案します。</p></div>
+      <div class="flow-step reveal"><div class="flow-num">3</div><h4>戦略設計</h4><p>KPI・打ち手を定義し、実行ロードマップを策定します。</p></div>
+      <div class="flow-step reveal"><div class="flow-num">4</div><h4>実行・伴走</h4><p>施策を実行し、改善を重ねながら自走化まで伴走します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="pad" id="faq">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="sec-title">よくあるご質問</h2>
+      <p class="lead section-tag">※ 以下は想定問答の一例です。実際のFAQ内容に差し替えてご利用ください。</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q"><span class="qm">Q</span>マーケティングの専任担当がいなくても依頼できますか？<span class="tgl">+</span></div><div class="faq-a"><div class="faq-a-in">はい。社内にマーケ人材がいない企業様こそ、ASCENDAの伴走型支援が活きます。戦略設計から実行まで踏み込み、ノウハウの社内移転までサポートします。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="qm">Q</span>一部の領域だけお願いすることは可能ですか？<span class="tgl">+</span></div><div class="faq-a"><div class="faq-a-in">可能です。インサイドセールスのみ、MA運用のみといった部分支援から、戦略〜実行の伴走型まで、貴社のフェーズに合わせて柔軟に対応します。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="qm">Q</span>すでにMAツールを導入済みですが活用できていません。<span class="tgl">+</span></div><div class="faq-a"><div class="faq-a-in">導入済みツールの活用支援も得意領域です。シナリオ設計・スコアリングの実装から運用定着まで、ツールを成果につなげる支援を行います。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="qm">Q</span>成果が出るまで、どのくらいかかりますか？<span class="tgl">+</span></div><div class="faq-a"><div class="faq-a-in">施策内容により異なりますが、リード獲得や商談数の変化は数ヶ月で表れるケースが多くあります。初回相談時に、現状をふまえた見通しをご提示します。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="qm">Q</span>BtoB以外の事業でも対応できますか？<span class="tgl">+</span></div><div class="faq-a"><div class="faq-a-in">ASCENDAはBtoBマーケティングを専門領域としています。BtoB特有の長い検討プロセスや商談設計に強みがあります。まずはご相談ください。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="qm">Q</span>相談だけでも費用はかかりますか？<span class="tgl">+</span></div><div class="faq-a"><div class="faq-a-in">初回のご相談は無料です。課題の整理やおおまかな方向性のご提案まで、お気軽にご活用ください。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="final" id="contact">
+  <div class="final-bg"></div>
+  <div class="wrap">
+    <div class="final-in reveal">
+      <h2>その実績を、<span class="ac">次の成長</span>へ。</h2>
+      <p>「事業を伸ばしたいが、何から手をつけるべきか分からない」——そんな段階からで大丈夫です。<br>まずは無料相談で、貴社の現状と打ち手を一緒に整理しましょう。</p>
+      <div class="final-cta">
+        <a href="#contact" class="btn btn-primary">無料で相談する<span class="arw">→</span></a>
+        <a href="#" class="btn btn-ghost">サービス資料をダウンロード</a>
+      </div>
+      <div class="final-assure">
+        <span>初回相談は無料</span>
+        <span>即日返信・平日9:00–20:00</span>
+        <span>無理な営業は一切なし</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo"><span class="dot"></span>ASCENDA</div>
+        <p>BtoBマーケティング専門の事業成長コミット集団。戦略から実行まで、貴社の成長に深く伴走します。</p>
+      </div>
+      <div class="foot-contact">
+        <div style="font-size:12px;letter-spacing:0.1em;color:#7e93b4;font-family:Manrope">CONTACT</div>
+        <div class="tel"></div>
+        <div class="hrs">受付時間：平日 9:00–20:00</div>
+        <div style="margin-top:14px"><a href="#contact" class="btn btn-primary" style="font-size:14px;padding:13px 26px">無料で相談する →</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© ASCENDA Inc. All rights reserved.</span>
+      <span>株式会社ASCENDA</span>
+    </div>
+    <div class="disclaimer-note">
+      <strong style="color:#9fb2d2">CONCEPT DESIGN DEMO — DISCLAIMER</strong><br>本ページは、CVR最適化を目的としたLPデザインのコンセプトデモです。「ASCENDA」は架空のブランドであり、実在の企業・商品・人物・サービスとは一切関係ありません。掲載の実績数値・お客様事例・比較表・FAQ・ご支援ルールはすべてサンプル文言であり、画像はAI（gpt-image-2）により生成された架空のビジュアルです。
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Sticky bottom CTA (mobile) ===== -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sc-txt">事業成長のご相談はこちら<small>初回無料・平日9–20時</small></div>
+  <a href="#contact" class="btn btn-primary">無料相談 →</a>
+</div>
+
+<script>
+// Header shrink
+const hdr=document.getElementById('hdr');
+const sticky=document.getElementById('stickyCta');
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  hdr.classList.toggle('scrolled',y>40);
+  sticky.classList.toggle('show',y>700);
+},{passive:true});
+// Reveal on scroll
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;const a=q.nextElementSibling;
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+</script>
+</body>
+</html>
